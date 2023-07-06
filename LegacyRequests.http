@@ -1,0 +1,19 @@
+@legacyBaseUrl = http://localhost:6003/
+
+### SoapLegacy
+POST {{legacyBaseUrl}}CityFinderServiceSoap.asmx
+Content-Type: text/xml
+SOAPAction: http://example.com/CityFinderService/findCitiesAction
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://example.com/CityFinderService/">
+	<soapenv:Header></soapenv:Header>
+	<soapenv:Body>
+		<ns:findCities>
+			 <country>US</country>
+	         <zipCode></zipCode>
+	         <city></city>
+	         <limit>10</limit>
+	         <order></order>
+		</ns:findCities>
+	</soapenv:Body>
+</soapenv:Envelope>
