@@ -1,0 +1,57 @@
+Response time: 65 ms
+Status code: OK (200)
+X-SourceFiles: =?UTF-8?B?RDpcX2RhdGFcR2l0SHViUmVwb3NcUGFsb01yYXpcU29hcENvcmVGZWF0dXJlc0V4cGxvcmF0aW9uXFNvYXBMZWdhY3lcQ2l0eUZpbmRlclNlcnZpY2VTb2FwLmFzbXg=?=
+Cache-Control: max-age=0, private
+Date: Fri, 07 Jul 2023 07:16:08 GMT
+Server: Microsoft-IIS/10.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+
+Content-Length: 982
+Content-Type: text/xml; charset=utf-8
+
+------------------------------------------------
+Content:
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <FindCitiesDefaultResponse xmlns="http://example.com/CityFinderService">
+      <findCitiesResponse>
+        <city>
+          <country>US1</country>
+          <countryNum>1</countryNum>
+          <zipCode>90001</zipCode>
+          <name>US1</name>
+          <town>Town1</town>
+        </city>
+        <city>
+          <country>US2</country>
+          <countryNum>2</countryNum>
+          <zipCode>90002</zipCode>
+          <name>US2</name>
+          <town>Town2</town>
+        </city>
+        <city>
+          <country>US3</country>
+          <countryNum>3</countryNum>
+          <zipCode>90003</zipCode>
+          <name>US3</name>
+          <town>Town3</town>
+        </city>
+        <city>
+          <country>US4</country>
+          <countryNum>4</countryNum>
+          <zipCode>90004</zipCode>
+          <name>US4</name>
+          <town>Town4</town>
+        </city>
+        <city>
+          <country>US5</country>
+          <countryNum>5</countryNum>
+          <zipCode>90005</zipCode>
+          <name>US5</name>
+          <town>Town5</town>
+        </city>
+      </findCitiesResponse>
+    </FindCitiesDefaultResponse>
+  </soap:Body>
+</soap:Envelope>

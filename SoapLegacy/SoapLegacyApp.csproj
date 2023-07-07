@@ -47,21 +47,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
     <Content Include="CityFinderServiceSoap.asmx" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CityFinderServiceSoap.asmx.cs">
+      <DependentUpon>CityFinderServiceSoap.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CityType.cs" />
     <Compile Include="FindCities.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="CityFinderServiceSoap.asmx.cs">
-      <DependentUpon>CityFinderServiceSoap.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

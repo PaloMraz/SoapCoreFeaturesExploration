@@ -6,23 +6,20 @@ using System.Xml.Serialization;
 
 namespace SoapLegacyApp
 {
-  [WebService(Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace)]
+  [WebService(Namespace = ServiceContracts.Globals.CityFinderServiceNamespace)]
   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-  [SoapDocumentService(RoutingStyle = SoapServiceRoutingStyle.RequestElement)]
+  [SoapDocumentService(RoutingStyle = SoapServiceRoutingStyle.SoapAction)]
   public class CityFinderServiceSoap : WebService
   {
     /// <summary>
     [WebMethod]
     [return: XmlArray("findCitiesResponse")]
     [SoapDocumentMethod(
-      Action = ServiceContracts.Globals.PublicApiCityFinderServiceFindCitiesAction,
-      RequestNamespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace,
-      ResponseNamespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace,
+      Action = ServiceContracts.Globals.CityFinderServiceFindCitiesActionBare,
       Use = System.Web.Services.Description.SoapBindingUse.Literal,
-      ParameterStyle = SoapParameterStyle.Bare,
-      ResponseElementName = ServiceContracts.Globals.PublicApiCityFinderServiceFindCitiesResponseElementName)]
-    public List<CityType> findCities(
-      [XmlElement(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace)]
+      ParameterStyle = SoapParameterStyle.Bare)]
+    public List<CityType> FindCitiesBare(
+      [XmlElement(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = ServiceContracts.Globals.CityFinderServiceNamespace)]
       FindCities findCities)
     {
       return Enumerable.Range(1, 5)
@@ -35,5 +32,27 @@ namespace SoapLegacyApp
           ZipCode = $"9000{i}"
         }).ToList();
     }
+
+    [WebMethod]
+    [return: XmlArray("findCitiesResponse")]
+    [SoapDocumentMethod(
+      Action = ServiceContracts.Globals.CityFinderServiceFindCitiesActionDefault,
+      Use = System.Web.Services.Description.SoapBindingUse.Literal,
+      ParameterStyle = SoapParameterStyle.Default)]
+    public List<CityType> FindCitiesDefault(
+  [XmlElement(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = ServiceContracts.Globals.CityFinderServiceNamespace)]
+      FindCities findCities)
+    {
+      return Enumerable.Range(1, 5)
+        .Select(i => new CityType()
+        {
+          Country = $"US{i}",
+          CountryNum = i,
+          Name = $"US{i}",
+          Town = $"Town{i}",
+          ZipCode = $"9000{i}"
+        }).ToList();
+    }
+
   }
 }

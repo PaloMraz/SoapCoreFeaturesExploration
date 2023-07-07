@@ -9,7 +9,7 @@ namespace SoapCoreApp
   /// The city type with city, zip code and town.
   /// </summary>
   [Serializable]
-  [XmlType(Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace, TypeName = "city")]
+  [XmlType(Namespace = ServiceContracts.Globals.CityFinderServiceNamespace, TypeName = "city")]
   [DataContract]
   public class CityType
   {

@@ -3,17 +3,17 @@
 ### SoapCore
 POST {{coreBaseUrl}}CityFinderServiceSoap.asmx
 Content-Type: text/xml
-SOAPAction: http://example.com/CityFinderService/findCitiesAction
+SOAPAction: http://example.com/CityFinderService/FindCitiesAction
 
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://example.com/CityFinderService/">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://example.com/CityFinderService">
 	<soapenv:Header></soapenv:Header>
 	<soapenv:Body>
-		<ns:findCities>
+		<ns:FindCities>
 			 <country>US</country>
 	         <zipCode></zipCode>
 	         <city></city>
 	         <limit>10</limit>
 	         <order></order>
-		</ns:findCities>
+		</ns:FindCities>
 	</soapenv:Body>
 </soapenv:Envelope>

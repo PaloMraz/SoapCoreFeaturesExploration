@@ -5,14 +5,14 @@ using System.Xml.Serialization;
 
 namespace SoapCoreApp
 {
-  [ServiceContract(Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace)]
+  [ServiceContract(Namespace = ServiceContracts.Globals.CityFinderServiceNamespace)]
   public class CityFinderServiceSoap
   {
     /// <summary>
     [OperationContract]
     [return: XmlArray("findCitiesResponse")]
-    public List<CityType> findCities(
-      [XmlElement(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace)]
+    public List<CityType> FindCities(
+      [XmlElement(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = ServiceContracts.Globals.CityFinderServiceNamespace)]
       FindCities findCities)
     {
       return Enumerable.Range(1, 5)

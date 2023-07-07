@@ -5,8 +5,8 @@ using System.Xml.Serialization;
 namespace SoapLegacyApp
 {
   [Serializable]
-  [XmlType(Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace, TypeName = "findCities")]
-  [XmlRoot(Namespace = ServiceContracts.Globals.PublicApiCityFinderServiceNamespace, ElementName = "findCities")]
+  [XmlType(Namespace = ServiceContracts.Globals.CityFinderServiceNamespace, TypeName = "findCities")]
+  [XmlRoot(Namespace = ServiceContracts.Globals.CityFinderServiceNamespace, ElementName = "findCities")]
   public class FindCities
   {
     [XmlElement("country", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]

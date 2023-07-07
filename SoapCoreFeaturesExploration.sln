@@ -8,12 +8,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Http", "Http", "{93E67274-10B0-4A47-96ED-1EE96DADADEF}"
 	ProjectSection(SolutionItems) = preProject
 		CoreRequests.http = CoreRequests.http
+		CoreResponseSample.txt = CoreResponseSample.txt
 		LegacyRequests.http = LegacyRequests.http
+		LegacyResponseSampleBare.txt = LegacyResponseSampleBare.txt
+		LegacyResponseSampleDefault.txt = LegacyResponseSampleDefault.txt
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoapCoreApp", "SoapCore\SoapCoreApp.csproj", "{C87F4943-5641-4CBE-9C59-12858C99A76D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapCoreApp", "SoapCore\SoapCoreApp.csproj", "{C87F4943-5641-4CBE-9C59-12858C99A76D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{60C7C3CB-C26A-445A-A9A7-EEA980377B48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{60C7C3CB-C26A-445A-A9A7-EEA980377B48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
